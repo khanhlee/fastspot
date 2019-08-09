@@ -7,10 +7,10 @@ Step 2: use "fasttext_generated.py" file to transform FASTA sequence into FastTe
 - *python fasttext_generated.py fasta_file fasttext_file*
 
 Step 3: print vectors using FastText model:
-- *fasttext print-sentence-vectors model.bin < fasttext_file > fasttext_out*
+- *fasttext print-sentence-vectors model.bin < fasttext_file > vector_file*
 
 Step 4: use "linux_svm.py" to predict the generated file:
-- *python linux_svm.py data/spot.wN5.cv.csv input_file output_file*
+- *python linux_svm.py spot.wN5.cv.csv vector_file output_file*
 
 Step 4: check in *output_file* for the result:
 - '1' is hotspot
