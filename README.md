@@ -11,3 +11,7 @@ Step 3: print vectors using FastText model:
 
 Step 4: use "linux_svm.py" to predict the generated file:
 - *python linux_svm.py data/spot.wN5.cv.csv input_file output_file*
+
+Step 4: check in *output_file* for the result:
+- '1' is hotspot
+- '0' is coldspot
