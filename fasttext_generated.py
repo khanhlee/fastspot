@@ -5,28 +5,20 @@ Created on Wed Nov 14 15:22:57 2018
 @author: khanhle
 """
 import re
+import sys
 
-fout = open('enhancer_output1.txt','w')
+in_file = sys.args[1]
+out_file = sys.args[2]
 
-spe_character = ['X','U','B','Z']
-#spe_character = []
+fout = open(out_file,'w')
 
-fpos = 'enhancer.txt'
-with open(fpos) as f:
+spe_character = []
+
+with open(in_file) as f:
     for line in f:
         if (line.startswith('>') == False) and (any(x in line for x in spe_character) == False):
             sequence = ''.join(line).replace('\n','')
             print(sequence)
-            fout.write('__label__positive ' + ' '.join(list(sequence)) + '\n')
-            
-fneg = 'non.txt'
-with open(fneg) as f:
-    for line in f:
-        if len(line.strip()) > 0:
-            if (line.startswith('>') == False) and (any(x in line for x in spe_character) == False):
-    #        if (line.startswith('>') == False) and (any(x in line for x in spe_character) == False):
-                sequence = ''.join(line).replace('\n','')
-                print(sequence)
-                fout.write('__label__negative ' + ' '.join(list(sequence)) + '\n')
-            
+            fout.write(' '.join(list(sequence)) + '\n')
+                   
 fout.close()
