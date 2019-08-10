@@ -7,8 +7,8 @@ Created on Wed Nov 14 15:22:57 2018
 import re
 import sys
 
-in_file = sys.args[1]
-out_file = sys.args[2]
+in_file = sys.argv[1]
+out_file = sys.argv[2]
 
 fout = open(out_file,'w')
 
