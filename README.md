@@ -20,3 +20,7 @@ Use "linux_svm.py" to predict the generated file:
 Check in *output_file* for the result:
 - '1' is hotspot
 - '0' is coldspot
+
+## Citation
+Please cite our paper as:
+>Do DT, Le NQK. 2019. A sequence-based approach for identifying recombination spots in Saccharomyces cerevisiae by using hyper-parameter optimization in FastText and support vector machine. *Chemometrics and Intelligent Laboratory Systems*, 194, 103855. https://doi.org/10.1016/j.chemolab.2019.103855.
